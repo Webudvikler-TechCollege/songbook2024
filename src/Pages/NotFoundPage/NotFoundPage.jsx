@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { ContentWrapper } from "../../Components/ContentWrapper/ContentWrapper"
-import { Hero } from "../../Components/Hero/Hero"
 
 export const NotFoundPage = () => {
   return (
