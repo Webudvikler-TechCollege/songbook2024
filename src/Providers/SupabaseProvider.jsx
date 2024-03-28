@@ -7,7 +7,7 @@ export const SupabaseProvider = ({ children }) => {
   const [supabase, setSupabase] = useState(null)
 
   // Create a new supabase client
-  const supabaseUrl = "https://boaajtoztbbwyitsymvh.supabase.co"
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
   const supabaseKey = import.meta.env.VITE_SUPABASE_KEY
 
   useEffect(() => {

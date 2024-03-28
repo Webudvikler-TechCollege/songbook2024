@@ -6,11 +6,8 @@ export const NavBar = ({ area }) => {
   const [isActive, setActive] = useState(false)
 
   const arrNavItems = [
-    { name: "HOME", path: "/" },
-    { name: "PLAKATER", path: "/posters/action" },
-    { name: "OM OS", path: "/about" },
-    { name: "KONTAKT", path: "/contact" },
-    { name: "KURV", path: "/cart" },
+    { name: "FORSIDE", path: "/" },
+    { name: "SANGE", path: "/songs" },
     { name: "LOGIN", path: "/login" }
   ]
 

@@ -4,7 +4,7 @@ import { HeaderContainer } from './Header.style'
 export const Header = ({ area }) => {
   return (
 	<HeaderContainer $area={area}>
-		<Link to="/">WALLYWOOD</Link>
+		<Link to="/">SONGBOOK</Link>
 	</HeaderContainer>
   )
 }

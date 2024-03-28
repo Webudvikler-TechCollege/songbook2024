@@ -4,7 +4,7 @@ import { Reset } from '../../Styled/Mixins.style'
 export const FooterContainer = styled.footer`
 	grid-area: ${props => props.$area};
 
-	border-top: solid 1px ${props => props.theme.colors.quinary};
+	border-top: solid 1px ${props => props.theme.colors.primary};
 	margin-top: 1rem;
 	padding-bottom: 1.5rem;
 	padding-top: 1.5rem;
@@ -25,7 +25,7 @@ export const FooterContainer = styled.footer`
 	h2 {
 		font-size: 1rem;
 		text-transform: uppercase;
-		color: ${props => props.theme.colors.secondary};
+		color: ${props => props.theme.colors.primary};
 		${ Reset }
 	}
 

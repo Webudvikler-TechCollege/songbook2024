@@ -18,4 +18,10 @@ export const GridContainer = styled.div`
 		grid-template-rows: ${props => props.theme.grid.desktop.primary.rows};
 		grid-template-areas: ${props => props.theme.grid.desktop.primary.areas} !important;		
 	}
+
+	@media print { 
+		grid-template-columns: ${props => props.theme.grid.print.columns};
+		grid-template-rows: ${props => props.theme.grid.print.rows};
+		grid-template-areas: ${props => props.theme.grid.print.areas} !important;		
+	}
 `

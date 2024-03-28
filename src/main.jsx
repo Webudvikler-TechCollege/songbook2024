@@ -7,17 +7,20 @@ import { AuthProvider } from "./Providers/AuthProvider.jsx"
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle } from "./Styled/Global.style.js"
 import { theme } from "./Styled/Theme.style.js"
+import { SongProvider } from "./Providers/SongProvider.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <SupabaseProvider>
       <AuthProvider>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <GlobalStyle />
-            <App />
-          </BrowserRouter>
-        </ThemeProvider>
+        <SongProvider>
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <GlobalStyle />
+              <App />
+            </BrowserRouter>
+          </ThemeProvider>
+        </SongProvider>
       </AuthProvider>
     </SupabaseProvider>
   </React.StrictMode>

@@ -1,15 +1,13 @@
 export const theme = {
   colors: {
-    primary: "#5C1F06",
-    secondary: "#D97852",
-    tertiary: "#524641",
-    quaternary: "#707070",
-    quinary: "#D1B3A7",
-    senary: "#A68E85",
+    primary: "#637A9F",
+    secondary: "#FFF3CF",
+    tertiary: "#C9D7DD",
+    quaternary: "#E8C872",
     dark: "#000",
     light: "#fff",
   },
-  fonts: ["Titillium Web", "Open Sans"],
+  fonts: ["Titillium Web", "Open Sans", "monospace"],
   fontsizes: {
     xs: "0.8rem",
     s: "0.9rem",
@@ -62,6 +60,11 @@ export const theme = {
 					"footer footer footer footer footer footer"
 					`
       }
+    },
+    print: {
+      rows: "12fr",
+      columns: "12fr",
+      areas: `"main"`
     }
   }
 }

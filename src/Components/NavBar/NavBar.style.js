@@ -15,7 +15,7 @@ export const NavBarContainer = styled.nav`
       position: absolute;
       width: 100%;
       height: 12%;
-      background-color: black;
+      background-color: ${(props) => props.theme.colors.primary};
       transition: 0.2s ease-in-out;
 
       &:first-child {
@@ -36,7 +36,7 @@ export const NavBarContainer = styled.nav`
     }
 
     @media screen and (min-width: ${props => props.theme.grid.breakpoints.m}) {
-		display: none;
+		  display: none;
     }
   }
 
@@ -112,13 +112,13 @@ export const NavBarContainer = styled.nav`
 
       a {
         font-family: ${(props) => props.theme.fonts[0]};
-        color: ${(props) => props.theme.colors.tertiary};
+        color: ${(props) => props.theme.colors.primary};
         text-decoration: none;
         font-size: ${(props) => props.theme.fontsizes.m};
         white-space: nowrap;
 
         &:hover {
-          color: ${(props) => props.theme.colors.secondary};
+          color: ${(props) => props.theme.colors.quaternary};
         }
       }
     }

@@ -1,10 +1,10 @@
 import { ContentWrapper } from "../../Components/ContentWrapper/ContentWrapper"
 import { SongList } from "../../Components/SongList/SongList"
 
-export const HomePage = () => {
+export const SongListPage = () => {
   return (
-    <ContentWrapper title="20 tilfældige">
-      <SongList type="random" />
+    <ContentWrapper title="Sange">
+      <SongList />
     </ContentWrapper>
   )
 }
