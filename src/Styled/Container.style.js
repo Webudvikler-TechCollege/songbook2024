@@ -13,5 +13,9 @@ export const ContainerStyle = styled.section`
 	@media screen and (min-width: ${props => props.theme.grid.breakpoints.m}) {
 		padding: 1.5rem 2.3rem 0 2.3rem;
 	}
+
+	@media print {
+		overflow: visible;
+	}		
 `
 

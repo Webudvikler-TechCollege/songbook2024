@@ -5,18 +5,18 @@ const SongContext = createContext();
 
 const SongProvider = ({ children }) => {
 	const { supabase } = useSupabase()
-	const [ songData, setSongData ] = useState([])
+	const [ songList, setSongList ] = useState([])
 
 	const getData = async () => {
 		if (supabase) {
 			console.log("fetching songs");
 			const { data, error } = await supabase
 				.from("songs")
-				.select("id, title, content, artists(name)")
+				.select("id, title, content, artists(id,name)")
 			if (error) {
 				console.error("Error fetching songs", error)
 			} else {
-				setSongData(data)
+				setSongList(data)
 			}
 		}
 	}
@@ -26,7 +26,7 @@ const SongProvider = ({ children }) => {
 	}, [children, supabase])
 
 	return (
-		<SongContext.Provider value={{ songData, setSongData }}>
+		<SongContext.Provider value={{ songList, setSongList }}>
 			{children}
 		</SongContext.Provider>
 	);

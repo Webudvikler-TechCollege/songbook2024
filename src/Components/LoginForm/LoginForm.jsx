@@ -23,7 +23,6 @@ export const LoginForm = () => {
       console.log("Logged in:", data)
       sessionStorage.setItem("supabase.auth.token", JSON.stringify(data)) 
       setLoginData(data)
-      console.log(loginData);
     }
   }
 

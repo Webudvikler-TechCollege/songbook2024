@@ -10,8 +10,6 @@ export const SongDetails = () => {
   const { id } = useParams()
   const navigate = useNavigate()
 
-  console.log(id)
-
   const getData = async () => {
     if (supabase) {
       const { data, error } = await supabase
@@ -31,9 +29,16 @@ export const SongDetails = () => {
     getData()
   }, [supabase])
 
+  const arrButtonPanel = [
+    { text: "Rediger", link: `/admin/songs/update/${id}` },
+    { text: "Udskriv", event: () => window.print() },
+    { text: "Slet", link: `/admin/songs/delete/${id}` }
+  ]
+
+
   return (
     <SongDetailsContainer>
-      <ContentWrapper title={song.title}>
+      <ContentWrapper title={song.title} buttons={arrButtonPanel}>
         {song && song.artists && (
           <>
             <h4>Af {song.artists.name}</h4>

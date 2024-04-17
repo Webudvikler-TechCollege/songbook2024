@@ -1,15 +1,22 @@
 import { NavLink } from "react-router-dom"
 import { NavBarContainer } from "./NavBar.style"
 import { useState } from "react"
+import { useAuth } from "../../Providers/AuthProvider"
 
 export const NavBar = ({ area }) => {
   const [isActive, setActive] = useState(false)
+  const auth = useAuth()
 
   const arrNavItems = [
-    { name: "FORSIDE", path: "/" },
-    { name: "SANGE", path: "/songs" },
-    { name: "LOGIN", path: "/login" }
+    { name: "FORSIDE", path: "/", order: 10 },
+    { name: "SANGE", path: "/songs", order: 20 }
   ]
+
+  if(auth?.loginData?.session?.access_token) {
+    arrNavItems.push({ name: "PROFIL", path: "/login", order: 40 })
+  } else {
+    arrNavItems.push({ name: "LOGIN", path: "/login", order: 40 })
+  }
 
   const handleToggle = () => {
     setActive(!isActive)
