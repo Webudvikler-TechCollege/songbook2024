@@ -17,6 +17,7 @@ const SongProvider = ({ children }) => {
 				console.error("Error fetching songs", error)
 			} else {
 				setSongList(data)
+				console.log("songList", songList);
 			}
 		}
 	}
