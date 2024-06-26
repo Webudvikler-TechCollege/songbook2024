@@ -64,7 +64,6 @@ export const SongCreate = () => {
       ])
       .select()
       .single()
-      console.log(newArtistName);
       if (error) {
       console.error("Fejl: kunne ikke tilføje artist", error)
     } else {
